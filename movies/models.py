@@ -11,5 +11,5 @@ GENRE_CHOICES = (
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     description = models.CharField(max_length=500)
-    image = models.ImageField(upload_to='movies')
+    # image = models.ImageField(upload_to='movies')
     genre = models.CharField(choices=GENRE_CHOICES,max_length=1)
