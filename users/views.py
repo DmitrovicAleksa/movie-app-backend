@@ -9,7 +9,3 @@ class RegisterUser(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-# class LoginUserView(APIView):
-#     queryset = User.objects.all()
-#     permission_classes = [permissions.IsAuthenticated]
-#     serilazer_class = UserSerializer
