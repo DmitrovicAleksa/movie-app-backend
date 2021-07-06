@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from .models import Movie
+from rest_framework import viewsets,permissions
+from .serializers import MovieSerializer
 
-# Create your views here.
+
+class MovieList(viewsets.ModelViewSet):
+    queryset = Movie.objects.all()
+    permission_classes = [permissions.IsAuthenticated]
+    serializer_class = MovieSerializer
