@@ -9,5 +9,4 @@ router.register(r'users', views.RegisterUser, basename="users")
 
 urlpatterns = [
     url('',include(router.urls)),
-    # path('user/me',views.LoginUserView.as_view())
-]
+    ]
