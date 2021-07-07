@@ -1,7 +1,6 @@
 from .serializers import UserSerializer
 from .models import User
-from rest_framework import viewsets,permissions
-from rest_framework.views import APIView
+from rest_framework import viewsets
 
 # Create your views here.
 
