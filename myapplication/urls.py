@@ -19,11 +19,14 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 urlpatterns = [
     path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('login/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('admin/', admin.site.urls),
     path('',include('movies.urls')),
-    path('',include('users.urls'))
-]
+    path('',include('users.urls')),
+] + static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
